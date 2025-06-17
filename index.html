@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Marker</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <section
+      id="main"
+      class="container mt-5 d-flex flex-column align-items-center position-relative"
+    >
+      <h1>Bookmarker</h1>
+      <div
+        class="inputs-content mt-5 w-100 d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <h2>
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="inputs mb-3 w-100 d-flex flex-column">
+          <label for="siteName" class="lable-style pt-3"
+            ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+          >
+          <input
+            oninput="inputValidation( this , 'nameInvalidMsg')"
+            type="text"
+            class="input-style"
+            id="siteName"
+            placeholder="Bookmark Name"
+          />
+          <p
+            id="nameInvalidMsg"
+            class="bg-danger-subtle rounded-2 text-danger ps-2 mt-1 d-none mb-0"
+          >
+            <i class="fa-solid fa-circle-exclamation"></i> Write a name with a
+            capital first letter, rest lowercase, max 20 characters, Example:
+            Mysite
+          </p>
+          <label for="siteUrl" class="lable-style pt-3"
+            ><i class="fa-solid fa-link"></i> Site URL</label
+          >
+          <input
+            oninput="inputValidation( this , 'urlInvalidMsg')"
+            type="text"
+            class="input-style"
+            id="siteUrl"
+            placeholder="Website URL"
+          />
+          <p
+            id="urlInvalidMsg"
+            class="bg-danger-subtle rounded-2 text-danger ps-2 mt-1 d-none mb-0"
+          >
+            <i class="fa-solid fa-circle-exclamation"></i> "Please enter a valid
+            URL (example.com, https://www.example.com, or
+            https://subdomain.example.co.uk/path)."
+          </p>
+
+          <button
+            onclick="addSite()"
+            id="submitBtn"
+            class="btn custom-btn text-white mt-3"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <table class="table table-striped my-4">
+        <thead>
+          <tr class="text-center">
+            <th>No.</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <div
+      id="invalidWarning"
+      class="invalid-warning position-fixed d-flex justify-content-center align-items-center d-none"
+    >
+      <div
+        class="layer w-100 position-fixed"
+        onclick="closeinvalidWarning()"
+      ></div>
+      <div class="invalidCard card position-absolute p-4">
+        <div
+          class="xIconAndColors d-flex justify-content-between align-items-center mb-4"
+        >
+          <div class="colors d-flex align-items-center gap-2">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <button
+            onclick="closeinvalidWarning()"
+            class="bg-transparent border-0 fs-3"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p>
+          Site Name or Url is not valid, Please follow the <br />
+          rules below :
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            <i class="fa-regular fa-circle-right p-1"></i> Site name must
+            contain at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-1"></i> Site URL must be a
+            valid one
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

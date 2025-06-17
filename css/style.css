@@ -1,0 +1,273 @@
+/* fonts */
+@font-face {
+  font-family: pt;
+  src: url(../fonts/PT_Sans_Caption/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: bree;
+  src: url(../fonts/Bree_Serif/BreeSerif-Regular.ttf);
+}
+@font-face {
+  font-family: pacifico;
+  src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: righteous;
+  src: url(../fonts/Righteous/Righteous-Regular.ttf);
+}
+
+/* global variables */
+:root {
+  --header-font: pacifico;
+  --style-font: righteous;
+  --main-font: pt;
+  --secondary-font: bree;
+  --main-color: #fec260;
+  --grediant-color-1: #b5ac49;
+  --grediant-color-2: #3ca55c;
+  --visit-color: #9eb23b;
+  --visit-hover-color: #8a9e23;
+  --delete-color: #eb1d36;
+  --delete-hover-color: #d30820;
+  --submit-color: ##d1512d;
+  --submit-hover-color: #bb4120;
+  --body-color: #f7ecde;
+  --main-text-color: #212529;
+  --header-text-color: #352e28;
+  --light-text: #fff;
+}
+
+/* global classes */
+.lable-style {
+  margin-bottom: 8px;
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  width: fit-content;
+}
+.input-style {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.input-style:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(254, 194, 96, 0.25);
+}
+.custom-btn {
+  --bs-btn-padding-x: 12px;
+  --bs-btn-font-family: pt;
+  --bs-btn-line-height: 24px;
+  align-self: center;
+  color: var(--light-text);
+}
+
+/* heading styles */
+body {
+  background-color: var(--body-color) !important;
+}
+::selection {
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+}
+h1 {
+  font-family: var(--header-font);
+  font-size: 50px !important;
+  line-height: 60px;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  width: fit-content;
+}
+h1::after {
+  transition: all 0.5s;
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  top: 60%;
+  background-color: var(--main-color);
+  z-index: -1;
+}
+h1:hover::after {
+  top: 36%;
+}
+.inputs-content h2 {
+  text-align: center;
+  font-family: var(--style-font);
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    var(--grediant-color-2),
+    var(--grediant-color-1)
+  );
+  --bs-heading-color: transparent;
+  background-clip: text;
+  width: fit-content;
+  margin: auto;
+}
+
+/* inputs style */
+.inputs-content {
+  padding: 24px 16px;
+  border-block: 2px dotted black;
+}
+
+.custom-btn {
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: var(--bs-border-width);
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: var(--bs-border-radius);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem
+    rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--bs-btn-font-size);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.inputs button {
+  --bs-btn-bg: #d1512d;
+}
+.inputs button:hover {
+  background-color: var(--submit-hover-color);
+}
+.inputs button:hover,
+.visit-btn:hover,
+.delete-btn:hover {
+  color: var(--light-text);
+}
+
+.visit-btn:hover {
+  background-color: var(--visit-hover-color);
+}
+.visit-btn {
+  background-color: var(--visit-color);
+}
+
+.delete-btn {
+  --bs-btn-bg: var(--delete-color);
+}
+.delete-btn:hover {
+  background-color: var(--delete-hover-color);
+}
+
+/* invalid warning style */
+.invalid-warning,
+.layer {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.invalidCard {
+  padding: 24px;
+}
+
+.colors span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.colors span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.colors span:nth-child(2) {
+  background-color: #febe2e;
+}
+.colors span:nth-child(3) {
+  background-color: #4db748;
+}
+
+.invalid-warning .invalidCard p {
+  color: var(--header-text-color);
+  font-family: var(--secondary-font);
+  font-size: 21px;
+  line-height: 27.3px;
+  font-weight: 400;
+  padding: 0 0 2px;
+}
+
+.invalid-warning .invalidCard ul li {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 10px 0 0;
+}
+.invalid-warning .invalidCard ul li i {
+  color: var(--submit-hover-color);
+}
+
+/* media */
+@media screen and (max-width: 700px) {
+  .inputs-content h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .inputs-content h2 {
+    font-size: 16px;
+  }
+  .inputs .lable-style,
+  thead tr th,
+  tbody tr td {
+    font-size: 14px;
+  }
+  tbody tr td button i {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .custom-btn {
+    --bs-btn-font-size: 8px ;
+    text-align: center;
+  }
+}
