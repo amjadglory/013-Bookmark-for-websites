@@ -71,13 +71,6 @@
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(254, 194, 96, 0.25);
 }
-.custom-btn {
-  --bs-btn-padding-x: 12px;
-  --bs-btn-font-family: pt;
-  --bs-btn-line-height: 24px;
-  align-self: center;
-  color: var(--light-text);
-}
 
 /* heading styles */
 body {
@@ -169,6 +162,11 @@ h1:hover::after {
   background-color: var(--bs-btn-bg);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --bs-btn-padding-x: 12px;
+  --bs-btn-font-family: pt;
+  --bs-btn-line-height: 24px;
+  align-self: center;
+  color: var(--light-text);
 }
 
 .inputs button {
@@ -267,7 +265,7 @@ h1:hover::after {
 }
 @media screen and (max-width: 350px) {
   .custom-btn {
-    --bs-btn-font-size: 8px ;
+    --bs-btn-font-size: 8px;
     text-align: center;
   }
 }
