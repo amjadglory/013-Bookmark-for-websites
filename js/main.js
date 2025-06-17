@@ -109,8 +109,8 @@ function addSite() {
     clearInputs();
     displaySites();
     invalidWarning.classList.add("d-none");
-    siteName.classList.remove("is-valid" , "form-control");
-    siteUrl.classList.remove("is-valid" , "form-control");
+    siteName.classList.remove("is-valid", "form-control");
+    siteUrl.classList.remove("is-valid", "form-control");
     siteName.classList.add("input-style");
     siteUrl.classList.add("input-style");
   } else {
@@ -118,8 +118,16 @@ function addSite() {
   }
 }
 
+// statements
 var sites = [];
 if (localStorage.getItem("sites") != null) {
   sites = JSON.parse(localStorage.getItem("sites"));
   displaySites();
 }
+
+// events
+document.addEventListener("keyup", (esc) => {
+  if (esc.key === "Escape") {
+    closeinvalidWarning();
+  }
+});
