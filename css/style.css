@@ -176,22 +176,22 @@ h1:hover::after {
   background-color: var(--submit-hover-color);
 }
 .inputs button:hover,
-.visit-btn:hover,
-.delete-btn:hover {
+.visitBtn:hover,
+.deleteBtn:hover {
   color: var(--light-text);
 }
 
-.visit-btn:hover {
+.visitBtn:hover {
   background-color: var(--visit-hover-color);
 }
-.visit-btn {
+.visitBtn {
   background-color: var(--visit-color);
 }
 
-.delete-btn {
+.deleteBtn {
   --bs-btn-bg: var(--delete-color);
 }
-.delete-btn:hover {
+.deleteBtn:hover {
   background-color: var(--delete-hover-color);
 }
 

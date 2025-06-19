@@ -2,8 +2,8 @@
 var siteName = document.querySelector("#siteName");
 var siteUrl = document.querySelector("#siteUrl");
 var submitBtn = document.querySelector("#submitBtn");
-var visitBtn = document.querySelector("#visitBtn");
-var deleteBtn = document.querySelector("#deleteBtn");
+var visitBtn = document.querySelector(".visit-btn");
+var deleteBtn = document.querySelector(".delete-btn");
 var tbody = document.querySelector("tbody");
 var invalidMsg = document.querySelector("#invalidMsg");
 var nameInvalidMsg = document.querySelector("#nameInvalidMsg");
@@ -46,7 +46,7 @@ function clearInputs() {
 }
 
 function deleteSite(i) {
-  sites.splice(sites[i], 1);
+  sites.splice(i, 1);
   displaySites();
   localStorage.setItem("sites", JSON.stringify(sites));
 }
@@ -64,8 +64,7 @@ function returnSiteRow(i) {
             <td>
               <button
                 onclick="visitSite(${i})"
-                id="visit-btn"
-                class="visit-btn custom-btn"
+                class="visitBtn custom-btn"
               >
                 <i class="fa-solid fa-eye"></i> Visit
               </button>
@@ -73,8 +72,7 @@ function returnSiteRow(i) {
             <td>
               <button
                 onclick="deleteSite(${i})"
-                id="delete-btn"
-                class="delete-btn custom-btn"
+                class="deleteBtn custom-btn"
               >
                 <i class="fa-solid fa-trash-can"></i> delete
               </button>
