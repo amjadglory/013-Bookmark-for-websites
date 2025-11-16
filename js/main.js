@@ -92,7 +92,7 @@ function returnSiteRow(i) {
                 onclick="visitSite(${i})"
                 class="visitBtn custom-btn"
               >
-                <i class="fa-solid fa-eye"></i> Visit
+                Visit
               </button>
             </td>
             <td>
@@ -100,7 +100,7 @@ function returnSiteRow(i) {
                 onclick="dataOnInput(${i})"
                 class="updateBtn custom-btn"
               >
-                <i class="fa-solid fa-rotate"></i> Update
+                 Update
               </button>
             </td>
             <td>
@@ -108,7 +108,7 @@ function returnSiteRow(i) {
                 onclick="deleteSite(${i})"
                 class="deleteBtn custom-btn"
               >
-                <i class="fa-solid fa-trash-can"></i> delete
+                 delete
               </button>
             </td>
         </tr>

@@ -254,27 +254,88 @@ h1:hover::after {
 }
 
 /* media */
+/* 700px */
 @media screen and (max-width: 700px) {
   .inputs-content h2 {
     font-size: 20px;
   }
-}
-@media screen and (max-width: 400px) {
-  .inputs-content h2 {
-    font-size: 16px;
-  }
-  .inputs .lable-style,
+
+  .lable-style,
   thead tr th,
   tbody tr td {
     font-size: 14px;
   }
+
   tbody tr td button i {
     font-size: 12px;
   }
+
+  .custom-btn {
+    --bs-btn-font-size: 14px;
+    --bs-btn-padding-x: 10px;
+    --bs-btn-padding-y: 6px;
+  }
+
+  button .fa-solid {
+    font-size: 10px;
+  }
 }
+
+/* 400px */
+@media screen and (max-width: 400px) {
+  .inputs-content h2 {
+    font-size: 16px;
+  }
+
+  .lable-style,
+  thead tr th,
+  tbody tr td {
+    font-size: 12px;
+  }
+
+  tbody tr td button i {
+    font-size: 10px;
+  }
+
+  .custom-btn {
+    --bs-btn-font-size: 12px;
+    --bs-btn-padding-x: 8px;
+    --bs-btn-padding-y: 4px;
+  }
+
+  button .fa-solid {
+    font-size: 8px;
+  }
+}
+
+/* 350px */
 @media screen and (max-width: 350px) {
   .custom-btn {
+    --bs-btn-font-size: 10px;
+    --bs-btn-padding-x: 6px;
+    --bs-btn-padding-y: 3px;
+  }
+
+  button .fa-solid {
+    font-size: 6px;
+  }
+}
+
+/* 300px */
+@media screen and (max-width: 300px) {
+  .inputs-content h2 {
+    font-size: 14px;
+  }
+
+  .lable-style,
+  thead tr th,
+  tbody tr td {
+    font-size: 10px;
+  }
+
+  .custom-btn {
     --bs-btn-font-size: 8px;
-    text-align: center;
+    --bs-btn-padding-x: 4px;
+    --bs-btn-padding-y: 2px;
   }
 }
