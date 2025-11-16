@@ -1,6 +1,7 @@
 // get elememts from html
 var siteName = document.querySelector("#siteName");
 var siteUrl = document.querySelector("#siteUrl");
+var siteSearch = document.querySelector("#siteSearch");
 var submitBtn = document.querySelector("#submitBtn");
 var visitBtn = document.querySelector(".visit-btn");
 var deleteBtn = document.querySelector(".delete-btn");
@@ -114,10 +115,23 @@ function returnSiteRow(i) {
     `;
 }
 
+// function displaySites() {
+//   console.log(siteSearch.value);
+//   var searchInputValue = siteSearch.value;
+//   var row = ``;
+//   for (var i = 0; i < sites.length; i++) {
+//     console.log(sites.name);
+//     row += returnSiteRow(i);
+//   }
+//   tbody.innerHTML = row;
+// }
 function displaySites() {
+  var searchInputValue = siteSearch.value;
   var row = ``;
   for (var i = 0; i < sites.length; i++) {
-    row += returnSiteRow(i);
+    if (sites[i].name.toLowerCase().includes(searchInputValue.toLowerCase())) {
+      row += returnSiteRow(i);
+    }
   }
   tbody.innerHTML = row;
 }
