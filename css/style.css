@@ -29,6 +29,8 @@
   --visit-hover-color: #8a9e23;
   --delete-color: #eb1d36;
   --delete-hover-color: #d30820;
+  --update-color: #ffc926;
+  --update-hover-color: #ffc107;
   --submit-color: ##d1512d;
   --submit-hover-color: #bb4120;
   --body-color: #f7ecde;
@@ -169,10 +171,10 @@ h1:hover::after {
   color: var(--light-text);
 }
 
-.inputs button {
-  --bs-btn-bg: #d1512d;
+.submitBtn {
+  background-color: #d1512d;
 }
-.inputs button:hover {
+.submitBtn:hover {
   background-color: var(--submit-hover-color);
 }
 .inputs button:hover,
@@ -189,10 +191,17 @@ h1:hover::after {
 }
 
 .deleteBtn {
-  --bs-btn-bg: var(--delete-color);
+  background-color: var(--delete-color);
 }
 .deleteBtn:hover {
   background-color: var(--delete-hover-color);
+}
+
+.updateBtn {
+  background-color: var(--update-color);
+}
+.updateBtn:hover {
+  background-color: var(--update-hover-color);
 }
 
 /* invalid warning style */

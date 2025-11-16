@@ -4,12 +4,16 @@ var siteUrl = document.querySelector("#siteUrl");
 var submitBtn = document.querySelector("#submitBtn");
 var visitBtn = document.querySelector(".visit-btn");
 var deleteBtn = document.querySelector(".delete-btn");
+var updateBtn = document.querySelector(".updateBtn");
 var tbody = document.querySelector("tbody");
 var invalidMsg = document.querySelector("#invalidMsg");
 var nameInvalidMsg = document.querySelector("#nameInvalidMsg");
 var urlInvalidMsg = document.querySelector("#urlInvalidMsg");
 var invalidWarning = document.querySelector("#invalidWarning");
 var layer = document.querySelector(".layer");
+
+// variables
+var updatedSiteIndex = 0;
 
 // functions
 
@@ -56,6 +60,27 @@ function visitSite(i) {
   window.open(url);
 }
 
+function dataOnInput(i) {
+  console.log(sites[i]);
+  updatedSiteIndex = i;
+  siteName.value = sites[i].name;
+  siteUrl.value = sites[i].url;
+  updateBtn.classList.remove("d-none");
+  submitBtn.classList.add("d-none");
+}
+
+function updateSite() {
+  console.log();
+  sites[updatedSiteIndex].name = siteName.value;
+  sites[updatedSiteIndex].url = siteUrl.value;
+  updateBtn.classList.add("d-none");
+  submitBtn.classList.remove("d-none");
+  siteName.value = "";
+  siteUrl.value = "";
+  localStorage.setItem("sites", JSON.stringify(sites));
+  displaySites();
+}
+
 function returnSiteRow(i) {
   return `
         <tr class="text-center">
@@ -67,6 +92,14 @@ function returnSiteRow(i) {
                 class="visitBtn custom-btn"
               >
                 <i class="fa-solid fa-eye"></i> Visit
+              </button>
+            </td>
+            <td>
+              <button
+                onclick="dataOnInput(${i})"
+                class="updateBtn custom-btn"
+              >
+                <i class="fa-solid fa-rotate"></i> Update
               </button>
             </td>
             <td>

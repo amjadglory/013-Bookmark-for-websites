@@ -62,9 +62,16 @@
           <button
             onclick="addSite()"
             id="submitBtn"
-            class="btn custom-btn text-white mt-3"
+            class="submitBtn custom-btn text-white mt-3"
           >
             Submit
+          </button>
+          <button
+            onclick="updateSite()"
+            id="updateBtn"
+            class="custom-btn text-white mt-3 updateBtn d-none"
+          >
+            Update
           </button>
         </div>
       </div>
@@ -74,6 +81,7 @@
             <th>No.</th>
             <th>Website Name</th>
             <th>Visit</th>
+            <th>Update</th>
             <th>Delete</th>
           </tr>
         </thead>
